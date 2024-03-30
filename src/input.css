@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.objectives em {
+  @apply text-green-300 not-italic;
+}
+
+.click-to-copy {
+  cursor: pointer;
+}
+
+.click-to-copy::before {
+  position: absolute;
+  content: "Click to copy";
+  display: inline-block;
+  pointer-events: none;
+  transform: translateY(-100%) translateY(8px);
+  font-size: 0.8em;
+  opacity: 0;
+  @apply text-green-300/50;
+}
+
+.click-to-copy:hover::before {
+  opacity: 1;
+}

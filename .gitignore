@@ -1,0 +1,4 @@
+node_modules
+/style/
+_site
+.DS_Store
