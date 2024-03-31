@@ -10,6 +10,6 @@
     "dev:eleventy": "eleventy --serve",
     "dev:tailwind": "tailwindcss -i ./src/input.css -o ./style/output.css --watch",
     "dev": "concurrently \"npm:dev:*\" --kill-others",
-    "build": "eleventy && tailwindcss -i ./src/input.css -o ./style/output.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./style/output.css --minify && eleventy"
   }
 }
