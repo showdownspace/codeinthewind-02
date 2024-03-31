@@ -55,6 +55,7 @@ title: Code in the Wind #02
               }[langCode] || langCode;
             languageSelector.appendChild(langLink);
             langLink.setAttribute("lang", langCode);
+            langLink.className = "challenge-language-link";
             langLinks.set(langCode, langLink);
           }
           window.changeLanguage = (lang) => {
@@ -62,14 +63,7 @@ title: Code in the Wind #02
               div.hidden = div.getAttribute("lang") !== lang;
             }
             for (const langLink of langLinks.values()) {
-              langLink.classList.toggle(
-                "text-sky-300",
-                langLink.getAttribute("lang") === lang
-              );
-              langLink.classList.toggle(
-                "no-underline",
-                langLink.getAttribute("lang") === lang
-              );
+              langLink.dataset.active = langLink.getAttribute("lang") === lang;
             }
             localStorage.citwLanguage = lang;
           };

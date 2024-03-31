@@ -2,7 +2,7 @@
 layout: page.njk
 ---
 
-# Challenge: Hotel
+# Challenge: Hotel recommendation
 
 <div class="challenge"><div class="challenge-reference"><div class="challenge-sticky">
 

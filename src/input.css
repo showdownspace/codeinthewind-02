@@ -47,3 +47,11 @@
 .challenge-objectives > h2:first-of-type {
   margin-top: 0;
 }
+
+.challenge-language-link[data-active="true"] {
+  @apply text-inherit no-underline cursor-default;
+}
+
+.challenge-language-link:not([data-active="true"]) {
+  @apply text-yellow-300 underline;
+}
