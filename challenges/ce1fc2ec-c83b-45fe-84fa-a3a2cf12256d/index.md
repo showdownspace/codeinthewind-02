@@ -12,9 +12,9 @@ layout: page.njk
 
 - เพิ่มรูปภาพ 3 รูป แบ่งเป็น 2 แถว โดยแถวแรกมีภาพ 1 ภาพ และแถวที่สองมี 2 ภาพ มีช่องว่างระหว่างภาพเล็กๆ แต่ไม่มีช่องว่างระหว่างภาพกับกรอบที่ล้อมรอบ
 
-  - Image 1: <em>./bed.jpg</em>
-  - Image 2: <em>./bath.jpg</em>
-  - Image 3: <em>./sofa.jpg</em>
+  - Image 1: <em>/images/bed.jpg</em>
+  - Image 2: <em>/images/bath.jpg</em>
+  - Image 3: <em>/images/sofa.jpg</em>
 
 - ในส่วนที่แสดงข้อมูล ใส่ชื่อโรงแรมที่ด้านบน และใส่ราคาที่ด้านล่างขวา
 

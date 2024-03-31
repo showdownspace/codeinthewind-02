@@ -19,11 +19,8 @@ title: Code in the Wind #02
     </div>
     <script>
       for (const em of document.querySelectorAll('.objectives em')) {
-        if (em.textContent.startsWith("./")) {
-          em.textContent =
-            window.location.origin +
-            window.location.pathname.replace(/\/[^/]*$/, "") +
-            em.textContent.slice(1);
+        if (em.textContent.startsWith("/images/")) {
+          em.textContent = window.location.origin + em.textContent;
         }
         em.onclick = () => {
           const selection = window.getSelection();
