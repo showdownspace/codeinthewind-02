@@ -8,7 +8,7 @@ layout: page.njk
 
 ## Reference
 
-<img src="/images/challenge-placeholder.svg">
+<img src="reference.png">
 
 </div></div><div class="challenge-objectives">
 
