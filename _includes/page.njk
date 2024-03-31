@@ -2,33 +2,81 @@
 title: Code in the Wind #02
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/style/output.css">
+    <link rel="stylesheet" href="/style/output.css" />
   </head>
   <body class="bg-slate-900 text-white">
-    <div class="mx-auto max-w-5xl px-4 py-6">
-      <h1 class="mb-6 pb-1 border-b border-b-slate-700 text-slate-500">Code in the Wind - Challenge Site</h1>
+    <div class="mx-auto max-w-7xl px-4 py-6">
+      <h1 class="mb-6 pb-1 border-b border-b-slate-700 text-slate-500">
+        Code in the Wind - Challenge Site
+      </h1>
       <div class="prose prose-invert max-w-none">
         {{ content | safe }}
       </div>
     </div>
     <script>
-      for (const em of document.querySelectorAll('.objectives em')) {
+      for (const em of document.querySelectorAll(".objectives em")) {
         if (em.textContent.startsWith("/images/")) {
           em.textContent = window.location.origin + em.textContent;
         }
         em.onclick = () => {
           const selection = window.getSelection();
-          selection.removeAllRanges()
-          selection.selectAllChildren(em)
-          document.execCommand('copy')
+          selection.removeAllRanges();
+          selection.selectAllChildren(em);
+          document.execCommand("copy");
+        };
+        em.classList.add("click-to-copy");
+      }
+
+      {
+        const langs = document.querySelectorAll(".objectives");
+        if (langs.length > 1) {
+          const languageSelector = document.createElement("p");
+          languageSelector.appendChild(document.createTextNode("Language: "));
+          langs[0].before(languageSelector);
+          const langLinks = new Map();
+          for (const [index, div] of Array.from(langs).entries()) {
+            if (index > 0) {
+              languageSelector.appendChild(document.createTextNode(" · "));
+            }
+            div.hidden = true;
+            const langLink = document.createElement("a");
+            const langCode = div.getAttribute("lang");
+            langLink.href = `javascript:changeLanguage("${langCode}")`;
+            langLink.textContent =
+              {
+                th: "Thai",
+                en: "English",
+              }[langCode] || langCode;
+            languageSelector.appendChild(langLink);
+            langLink.setAttribute("lang", langCode);
+            langLinks.set(langCode, langLink);
+          }
+          window.changeLanguage = (lang) => {
+            for (const div of langs) {
+              div.hidden = div.getAttribute("lang") !== lang;
+            }
+            for (const langLink of langLinks.values()) {
+              langLink.classList.toggle(
+                "text-sky-300",
+                langLink.getAttribute("lang") === lang
+              );
+            }
+            localStorage.citwLanguage = lang;
+          };
+          window.changeLanguage(
+            (
+              Array.from(langs).find(
+                (el) => el.getAttribute("lang") === localStorage.citwLanguage
+              ) || langs[0]
+            ).getAttribute("lang")
+          );
         }
-        em.classList.add('click-to-copy')
       }
     </script>
   </body>

@@ -24,3 +24,26 @@
 .click-to-copy:hover::before {
   opacity: 1;
 }
+
+.challenge {
+  @apply flex flex-wrap gap-4 flex-row-reverse;
+}
+
+.challenge-reference {
+  flex: 1 0 540px;
+  max-width: 100%;
+}
+
+.challenge-objectives {
+  flex: 999999 1 560px;
+}
+
+.challenge-sticky {
+  position: sticky;
+  top: -56px;
+}
+
+.challenge-sticky > h2:first-of-type,
+.challenge-objectives > h2:first-of-type {
+  margin-top: 0;
+}
