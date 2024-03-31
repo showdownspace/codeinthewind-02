@@ -66,6 +66,10 @@ title: Code in the Wind #02
                 "text-sky-300",
                 langLink.getAttribute("lang") === lang
               );
+              langLink.classList.toggle(
+                "no-underline",
+                langLink.getAttribute("lang") === lang
+              );
             }
             localStorage.citwLanguage = lang;
           };
