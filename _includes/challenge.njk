@@ -1,0 +1,76 @@
+---
+layout: page.njk
+---
+
+<h1>{{ title }}</h1>
+
+<div class="challenge"><div class="challenge-reference"><div class="challenge-sticky">
+
+<h2>Reference</h2>
+
+<img src="{{ referenceImage }}">
+
+</div></div><div class="challenge-objectives">
+
+{{ content | safe }}
+
+</div></div>
+
+<script defer>
+  for (const em of document.querySelectorAll(".objectives em")) {
+    if (em.textContent.startsWith("/images/")) {
+      em.textContent = window.location.origin + em.textContent;
+    }
+    em.onclick = () => {
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.selectAllChildren(em);
+      document.execCommand("copy");
+    };
+    em.classList.add("click-to-copy");
+  }
+
+  {
+    const langs = document.querySelectorAll(".objectives");
+    if (langs.length > 1) {
+      const languageSelector = document.createElement("p");
+      languageSelector.appendChild(document.createTextNode("Language: "));
+      langs[0].before(languageSelector);
+      const langLinks = new Map();
+      for (const [index, div] of Array.from(langs).entries()) {
+        if (index > 0) {
+          languageSelector.appendChild(document.createTextNode(" · "));
+        }
+        div.hidden = true;
+        const langLink = document.createElement("a");
+        const langCode = div.getAttribute("lang");
+        langLink.href = `javascript:changeLanguage("${langCode}")`;
+        langLink.textContent =
+          {
+            th: "Thai",
+            en: "English",
+          }[langCode] || langCode;
+        languageSelector.appendChild(langLink);
+        langLink.setAttribute("lang", langCode);
+        langLink.className = "challenge-language-link";
+        langLinks.set(langCode, langLink);
+      }
+      window.changeLanguage = (lang) => {
+        for (const div of langs) {
+          div.hidden = div.getAttribute("lang") !== lang;
+        }
+        for (const langLink of langLinks.values()) {
+          langLink.dataset.active = langLink.getAttribute("lang") === lang;
+        }
+        localStorage.citwLanguage = lang;
+      };
+      window.changeLanguage(
+        (
+          Array.from(langs).find(
+            (el) => el.getAttribute("lang") === localStorage.citwLanguage
+          ) || langs[0]
+        ).getAttribute("lang")
+      );
+    }
+  }
+</script>

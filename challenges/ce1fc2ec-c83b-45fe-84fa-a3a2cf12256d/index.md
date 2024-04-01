@@ -1,16 +1,9 @@
 ---
-layout: page.njk
+layout: challenge.njk
+title: Hotel recommendation
+referenceImage: reference.png
+referenceCode: "https://play.tailwindcss.com/dArBqJEGej?size=540x720"
 ---
-
-# Challenge: Hotel recommendation
-
-<div class="challenge"><div class="challenge-reference"><div class="challenge-sticky">
-
-## Reference
-
-<img src="reference.png">
-
-</div></div><div class="challenge-objectives">
 
 ## Objectives
 
@@ -82,5 +75,3 @@ layout: page.njk
   - A red “<em>Only 1 left!</em>” row.
 
 </div>
-
-</div></div>
