@@ -2,7 +2,7 @@
 layout: challenge.njk
 title: Code 128
 referenceImage: reference.png
-referenceCode: "https://play.tailwindcss.com/gsrz8MSVGE?size=540x720"
+referenceCode: "https://play.tailwindcss.com/8G7Zu1X04j?size=540x720"
 ---
 
 ## Objectives
