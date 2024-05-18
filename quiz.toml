@@ -1,0 +1,111 @@
+[[questions]]
+text = "How to make an element a flex container?"
+answers = [
+  { text = "`d-flex`" },
+  { text = "`display-flex`" },
+  { text = "`flex`", correct = true },
+  { text = "`flex-box`" },
+]
+
+[[questions]]
+text = "How to make text appear on a single line, showing ‘…‘ when not enough space?"
+columns = 1
+answers = [
+  { text = "`ellipsis`" },
+  { text = "`text-ellipsis`" },
+  { text = "`text-overflow-ellipsis`" },
+  { text = "`truncate`", correct = true },
+]
+
+[[questions]]
+text = "How to make text bold?"
+answers = [
+  { text = "`bold`" },
+  { text = "`font-bold`", correct = true },
+  { text = "`fw-bold`" },
+  { text = "`text-bold`" },
+]
+
+[[questions]]
+text = "`rounded-xl`"
+columns = 1
+answers = [
+  { text = "`border-radius: 4px`" },
+  { text = "`border-radius: 8px`" },
+  { text = "`border-radius: 12px`", correct = true },
+  { text = "`border-radius: 16px`" },
+]
+
+[[questions]]
+text = "What does `invisible` do?"
+columns = 1
+answers = [
+  { text = "`display: none;`" },
+  { text = "`opacity: 0;`" },
+  { text = "`visibility: hidden;`", correct = true },
+  { text = "`visibility: invisible;`" },
+]
+
+[[questions]]
+text = "Who created Tailwind CSS?"
+answers = [
+  { text = "Adam Wathan", correct = true },
+  { text = "Evan You" },
+  { text = "Jen Simmons" },
+  { text = "John Resig" },
+]
+
+[[questions]]
+text = "`blue-500`"
+answers = [
+  { text = "#22c55e" },
+  { text = "#3b82f6", correct = true },
+  { text = "#6b7280" },
+  { text = "#ef4444" },
+]
+
+[[questions]]
+text = "`bg-gradient-to-br from-red-500 to-blue-500`"
+answers = [
+  { text = "<div style='position:absolute;border:8px solid #fff;box-shadow:0 4px 16px black;top:20px;bottom:20px;width:400px;background-image:linear-gradient(to bottom right,#ef4444,#3b82f6)'></div>", correct = true },
+  { text = "<div style='position:absolute;border:8px solid #fff;box-shadow:0 4px 16px black;top:20px;bottom:20px;width:400px;background-image:linear-gradient(to bottom left,#ef4444,#3b82f6)'></div>" },
+  { text = "<div style='position:absolute;border:8px solid #fff;box-shadow:0 4px 16px black;top:20px;bottom:20px;width:400px;background-image:linear-gradient(to top right,#ef4444,#3b82f6)'></div>" },
+  { text = "<div style='position:absolute;border:8px solid #fff;box-shadow:0 4px 16px black;top:20px;bottom:20px;width:400px;background-image:linear-gradient(to top left,#ef4444,#3b82f6)'></div>" },
+]
+
+[[questions]]
+text = "`text-7xl`"
+answers = [
+  { text = "48px" },
+  { text = "60px" },
+  { text = "72px", correct = true },
+  { text = "96px" },
+]
+
+[[questions]]
+text = "How to <s>strike out</s> a text?"
+answers = [
+  { text = "line-through", correct = true },
+  { text = "strike-out" },
+  { text = "strikethrough" },
+  { text = "strike-through" },
+]
+
+[[questions]]
+text = "`pink-600`"
+columns = 1
+answers = [
+  { text = "`hsl(32.13deg 94.62% 43.73%)`" },
+  { text = "`hsl(200.41deg 98.01% 39.41%)`" },
+  { text = "`hsl(215.29deg 19.32% 34.51%)`" },
+  { text = "`hsl(333.33deg 71.43% 50.59%)`", correct = true },
+]
+
+[[questions]]
+text = "What is the breakpoint for `md`"
+answers = [
+  { text = "768px" },
+  { text = "1024px", correct = true },
+  { text = "1280px" },
+  { text = "1536px" },
+]
