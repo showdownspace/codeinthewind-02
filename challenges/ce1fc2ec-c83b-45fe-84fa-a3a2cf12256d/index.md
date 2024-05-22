@@ -3,6 +3,66 @@ layout: challenge.njk
 title: Hotel recommendation
 referenceImage: reference.png
 referenceCode: "https://play.tailwindcss.com/dArBqJEGej?size=540x720"
+stage:
+  - image: 86afc3c82ee9af67408229a4f5d0586f
+    code: wlQuPl0uBz
+  - image: "08c8cccde5b606f56e60560677f60aea"
+    code: sqC3jnLbCf
+  - image: 0de041982edfadc3b0d2ea86eedea4e2
+    code: OluPqDl1tu
+  - image: 3bd5687946c38d1cd1dd2e3dccaf0e49
+    code: sCE4TjdnWv
+  - image: db929551bbea4d4e068d9ab102ad43a9
+    code: 903Vi7LNdi
+  - image: 7acee9a0729a5e9f9cbbdf75cc076ca4
+    code: IH83rGkiHY
+audience:
+  - image: 2793c4c154421d00c6a24cefae909914
+    code: a1DapwT6i3
+  - image: c03312bd1262c9168a033cd974b5af08
+    code: jYCEQBjqLB
+  - image: 653afa67edd81d73e9d047e8723aa12f
+    code: qOiLX1XIRU
+  - image: 74e7b78f3ab4fea17561deb8b1ff2be7
+    code: PF1AfEglm7
+  - image: 0ae72b83150121440e81abb09bdc0a8b
+    code: VizGABhGul
+  - image: 713adb0d2c10fddff5271129e72539a6
+    code: mCzSXmWgFl
+  - image: 1f09b8ec3987e6cd79b879d20cb114db
+    code: 5ksQTGBSHi
+  - image: 8b791e2dbc58700bd8863b8a39a1f540
+    code: n9gaSSp9u0
+  - image: 6eca5ac77e050c0babcb9e71ce6b95c9
+    code: EPVAgsyQrh
+  - image: "09fc6716e6a098b08a4762725a6e8017"
+    code: lnfyb9rQlI
+  - image: d0e7a86726a89364251320423ce2a793
+    code: A30fO8cvav
+  - image: b10abe91ae9b8b09afeadb1298c25438
+    code: lmz4Nid0pc
+  - image: 7a66560eb2cf7532b57509bee2af2fe0
+    code: VlC6Sv5u0x
+  - image: a40fbf8cc98068c17d3504f82a5f65e3
+    code: tPO0kICnTp
+  - image: f9dd2421da4bcc2f602d7d34c17b64b8
+    code: 7JK61xxQTe
+  - image: 8bef4707db501289f8462e1e9665f21c
+    code: K6sYS0nC4T
+  - image: eb6595aff99cb35e136e67b541db696a
+    code: 0RVOffTf7P
+  - image: f820299d41da1dd9139eed7c606e2e85
+    code: yWb2h453Zl
+  - image: 783ab6cd63347ec112f28d9cfac822f7
+    code: pXi9pEq5KE
+  - image: 26c015e67e3b0bc7538afe11cde3a39b
+    code: O9551LZSx5
+  - image: 873d7ef67ceb2b7fc21c45a87018a899
+    code: I2GEVpUn17
+  - image: e59e72ead09c2442588dabe432e9cfdb
+    code: KWrMJZPTYW
+  - image: 4ca9e97d5f325f9bc71d018035e69be3
+    code: Z953X5BKcx
 ---
 
 ## Objectives

@@ -74,3 +74,18 @@ layout: page.njk
     }
   }
 </script>
+
+{% if stage %}
+  <h2>Stage</h2>
+  {% set n = stage | length %}
+  <div class="not-prose grid {% if n == 6 %}grid-cols-3 md:grid-cols-6{% endif %} {% if n == 8 %}grid-cols-4 md:grid-cols-8{% endif %} gap-3">
+    {% for item in stage %}<a href="https://play.tailwindcss.com/{{ item.code }}?size=540x720" target="_blank" rel="noopener noreferrer"><img src="/images/submissions/{{ item.image }}.webp" class="border-4 border-sky-400"></a>{% endfor %}
+  </div>
+{% endif %}
+
+{% if audience %}
+  <h2>Audience submissions</h2>
+  <div class="not-prose grid grid-cols-8 md:grid-cols-12 gap-3">
+    {% for item in audience %}<a href="https://play.tailwindcss.com/{{ item.code }}?size=540x720" target="_blank" rel="noopener noreferrer"><img src="/images/submissions/{{ item.image }}.webp" class="border-2 border-sky-400"></a>{% endfor %}
+  </div>
+{% endif %}
