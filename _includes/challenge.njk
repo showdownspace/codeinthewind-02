@@ -8,7 +8,7 @@ layout: page.njk
 
 <h2>Reference</h2>
 
-<img src="{{ referenceImage }}" class="border-4 border-sky-400">
+{% if stage %}<a href="{{ referenceCode }}" target="_blank" rel="noopener noreferrer">{% endif %}<img src="{{ referenceImage }}" class="border-4 border-sky-400">{% if stage %}</a>{% endif %}
 
 </div></div><div class="challenge-objectives">
 
